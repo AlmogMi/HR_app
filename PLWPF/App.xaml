@@ -1,0 +1,61 @@
+﻿<Application x:Class="PLWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PLWPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <local:IDToIsEnabledConverter x:Key="IDToIsEnabledConverter" />
+        <local:InverseIDToIsEnabledConverter x:Key="InverseIDToIsEnabledConverter" />
+        <local:InverseBoolConverter x:Key="InverseBoolConverter" />
+        <local:ContractTerminatedConverter x:Key="ContractTerminatedConverter" />
+        <local:specIDToSpecObjectConverter x:Key="specIDToSpecObjectConverter" />
+        <local:EmployerIDToEmployerObjectConverter x:Key="EmployerIDToEmployerObjectConverter" />
+        <local:EmployeeIDToEmployeeObjectConverter x:Key="EmployeeIDToEmployeeObjectConverter" />
+        <local:NoValueConverter x:Key="NoValueConverter" />
+        <BooleanToVisibilityConverter x:Key="visibilityConverter" />
+
+        <Style x:Key="UserControlStyle" TargetType="UserControl">
+            <Setter Property="Margin" Value="15,15,15,0"/>
+            <Setter Property="Height" Value="375"/>
+        </Style>
+        
+        <Style x:Key="StackPanelButtonPane" TargetType="StackPanel">
+            <Setter Property="Margin" Value="0,50,0,0"/>
+        </Style>
+
+        <Style x:Key="GridUserControlStyle" TargetType="Grid">
+            <Setter Property="Margin" Value="15,0,0,0"/>
+        </Style>
+
+        <Style x:Key="baseButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
+
+
+
+        <Style x:Key="ComboBox_in_Grid_Style" TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,5" />
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        
+        <Style x:Key="TextBox_in_Grid_Style" TargetType="TextBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="Padding" Value="4"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#FFD0F7D0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="TextBlock_in_Grid_Style" TargetType="TextBlock">
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Application.Resources>
+</Application>

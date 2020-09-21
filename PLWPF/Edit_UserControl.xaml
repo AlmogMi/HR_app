@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PLWPF.Edit_UserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PLWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+
+    <Grid>
+        
+        <TabControl x:Name="tabC">
+            <TabItem Header="Employer">
+                <local:Employer_UserControl x:Name="employerUC"/>
+            </TabItem>
+            <TabItem Header="Employee">
+                <local:Employee_UserControl x:Name="employeeUC"/>
+            </TabItem>
+            <TabItem Header="Contract">
+                <local:Contract_UserControl x:Name="contractUC"/>
+            </TabItem>
+            <TabItem Header="Specialization">
+                <local:Spec_UserControl x:Name="specUC"/>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+    
+</UserControl>

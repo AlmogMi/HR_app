@@ -1,0 +1,20 @@
+﻿<Window x:Class="PLWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Contracter" SizeToContent="WidthAndHeight" ResizeMode="NoResize" Icon="group-of-people-in-a-formation.png">
+    <Grid>
+        <TabControl SelectedIndex="0" x:Name="mainTab" Background="LightGray">
+            <TabItem Header="View">
+                <local:ViewUserControl x:Name="viewUC" />
+            </TabItem>
+            <TabItem Header="Edit">
+                <local:Edit_UserControl x:Name="editUC">
+                </local:Edit_UserControl>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
